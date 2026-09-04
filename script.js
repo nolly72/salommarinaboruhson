@@ -54,4 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 4000); // Смена слайда каждые 4 секунды
     }
 });
- 
