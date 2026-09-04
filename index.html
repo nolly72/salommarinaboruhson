@@ -1,2 +1,161 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>LE PRESTIGE | Luxury Presentation</title><link rel="stylesheet" href="https://cloudflare.com"><link rel="stylesheet" href="style.css"></head><body><header class="site-header"><div class="logo">Le <span class="logo-accent">Prestige</span></div><nav class="nav-menu"><a href="#presentation" class="nav-link">Залы</a><a href="#reviews" class="nav-link">Отзывы</a><a href="#booking-section" class="nav-link">Запись</a></nav><button class="btn-book" onclick="scrollToBooking()">Онлайн-Запись</button></header><section class="hero"><div class="hero-slider"><div class="slide active" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.85)),url('img/hero-1.jpg')"></div><div class="slide" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.85)),url('img/hero-2.jpg')"></div><div class="slide" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.85)),url('img/hero-3.jpg')"></div></div><div class="hero-content"><h1 class="hero-title">Искусство вашей <span class="italic-title">совершенности</span></h1><p class="hero-subtitle">Премиальный бьюти-сервис в самом центре столицы. Именные залы лучших мастеров Москвы с 3-летней историей безупречности.</p><button class="btn-book btn-hero" onclick="scrollToBooking()">Забронировать визит</button></div></section><section id="presentation" class="section"><h2 class="section-title">Именные залы и мастера</h2><div class="presentation-container"><div class="presentation-block"><div class="master-card"><div class="master-photo"><img src="img/hair-1.jpg" alt="Елена"></div><h3>Елена Вернер</h3><span class="master-tag">Топ-Колорист</span><p class="master-text">Стаж 8 лет. Международный эксперт в сложных техниках Airtouch и Шатуш.</p></div><div class="zone-info"><h4>Парикмахерский зал Haute Couture</h4><p class="zone-desc">Пространство смены имиджа. Работаем исключительно на премиальных красителях.</p><div class="features-list"><div class="feature-item"><i class="fa-solid fa-gem"></i> Премиум материалы</div><div class="feature-item"><i class="fa-solid fa-sparkles"></i> Авторские техники</div></div><div class="mini-prices"><div class="mini-price-item"><span class="p-name">Airtouch окрашивание</span><span class="p-cost">от 8 500 ₽</span></div><div class="mini-price-item"><span class="p-name">Женская стрижка & укладка</span><span class="p-cost">от 3 500 ₽</span></div></div></div></div><div class="presentation-block reverse"><div class="master-card"><div class="master-photo"><img src="img/nails-1.jpg" alt="Кристина"></div><h3>Кристина Ли</h3><span class="master-tag">Ведущий Нейл-Дизайнер</span><p class="master-text">Стаж 5 лет. Скорость работы до 1 часа без потери люксового качества.</p></div><div class="zone-info"><h4>Зал ногтевой эстетики & SPA</h4><p class="zone-desc">Безупречная стерилизация инструментов по строгим медицинским стандартам.</p><div class="features-list"><div class="feature-item"><i class="fa-solid fa-virus-slash"></i> Стерильность 100%</div><div class="feature-item"><i class="fa-solid fa-leaf"></i> Лечебные эко-составы</div></div><div class="mini-prices"><div class="mini-price-item"><span class="p-name">Японский лечебный маникюр</span><span class="p-cost">от 3 000 ₽</span></div><div class="mini-price-item"><span class="p-name">Премиальный френч</span><span class="p-cost">от 3 500 ₽</span></div></div></div></div><div class="presentation-block"><div class="master-card"><div class="master-photo"><img src="img/makeup-1.jpg" alt="Анна"></div><h3>Анна Дюпон</h3><span class="master-tag">Топ-Визажист</span><p class="master-text">Стаж 6 лет. Регулярный стилист на модных бьюти-показах столицы.</p></div><div class="zone-info"><h4>Студия визажа и архитектуры взгляда</h4><p class="zone-desc">Индивидуальный подбор макияжа и геометрии бровей под особенности вашего лица.</p><div class="features-list"><div class="feature-item"><i class="fa-solid fa-wand-magic-sparkles"></i> Люкс косметика</div><div class="feature-item"><i class="fa-solid fa-eye"></i> Архитектура бровей</div></div><div class="mini-prices"><div class="mini-price-item"><span class="p-name">Вечерний макияж</span><span class="p-cost">от 5 000 ₽</span></div><div class="mini-price-item"><span class="p-name">Свадебный образ</span><span class="p-cost">от 6 000 ₽</span></div></div></div></div></div></section><section id="reviews" class="section section-alt"><h2 class="section-title">Отзывы наших гостей</h2><div class="reviews-container" id="reviewsContainer"></div></section><section id="booking-section" class="section"><h2 class="section-title">Премиальный сервис</h2><div class="booking-wrapper"><div class="booking-card"><h3>Забронировать визит</h3><p>Заполните форму, и наш консьерж свяжется с вами в течение 5 минут.</p><form id="leadForm" onsubmit="handleFormSubmit(event)"><div class="form-group"><input type="text" required placeholder="Ваше имя"></div><div class="form-group"><input type="tel" required placeholder="+7 (999) 000-00-00"></div><div class="form-group"><select required><option value="" disabled selected>Выберите интересующий зал</option><option value="hair">Парикмахерский зал (Елена Вернер)</option><option value="nails">Зал ногтевой эстетики (Кристина Ли)</option><option value="makeup">Студия визажа (Анна Дюпон)</option></select></div><button type="submit" class="btn-book" style="width:100%;background:var(--rose-gold);color:#fff;border:none;font-weight:600">Записаться к мастеру</button></form></div></div></section><section id="contacts" class="section section-alt"><h2 class="section-title">Контакты и локация</h2><div class="contacts-wrapper"><div class="contact-info"><h3>Ждем вас</h3><div class="contact-item"><i class="fa-solid fa-location-dot"></i><div class="contact-text">г. Москва, ул. Новый Арбат, 21</div></div><div class="contact-item"><i class="fa-solid fa-phone"></i><div class="contact-text">+7 (495) 000-00-00</div></div><div class="contact-item"><i class="fa-solid fa-clock"></i><div class="contact-text">Ежедневно: 10:00 — 22:00</div></div></div><div class="map-container"><iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0"></iframe></div></div></section><div class="ai-assistant-widget"><div class="ai-chat-window" id="aiChatWindow"><div class="ai-chat-header"><h4 class="ai-chat-title">ИИ Консьерж Prestige</h4><button class="btn-close-chat" onclick="toggleAiChat()"><i class="fa-solid fa-xmark"></i></button></div><div class="ai-chat-body"><div class="ai-msg bot">Здравствуйте! Рада видеть вас. Я виртуальный консьерж Le Prestige. Работаю здесь уже 3 года и знаю всё о наших залах и свободных окошках. Какой зал вас интересует?</div></div><div class="ai-chat-input-area"><input type="text" class="ai-input" placeholder="Задать вопрос..."><button class="btn-send-msg" onclick="sendAiMsg()"><i class="fa-solid fa-paper-plane"></i></button></div></div><button class="ai-button" onclick="toggleAiChat()"><i class="fa-solid fa-comment-dots"></i></button></div><footer class="site-footer"><p>&copy; 2026 LE PRESTIGE. Премиальный сервис с 2023 года. Все права защищены.</p></footer><script>function scrollToBooking(){document.getElementById('booking-section').scrollIntoView({behavior:'smooth'})}function toggleAiChat(){document.getElementById('aiChatWindow').classList.toggle('active')}function handleFormSubmit(e){e.preventDefault();alert('Заявка успешно создана! Консьерж уже связывается с вами.');e.target.reset()}document.querySelector('.ai-input').addEventListener('keypress',e=>{if(e.key==='Enter')sendAiMsg()});function sendAiMsg(){const inp=document.querySelector('.ai-input');const text=inp.value.trim();if(!text)return;const bdy=document.querySelector('.ai-chat-body');const uM=document.createElement('div');uM.className='ai-msg user';uM.style.cssText='background:rgba(200,122,140,0.15);align-self:flex-end;border-right:2px solid var(--accent-rose);padding:10px 15px;border-radius:4px;max-width:80%;color:#fff;';uM.textContent=text;bdy.appendChild(uM);inp.value='';bdy.scrollTop=bdy.scrollHeight;setTimeout(()=>{const bM=document.createElement('div');bM.className='ai-msg bot';const s=text.toLowerCase();let ans='Спасибо за обращение! Передаю данные менеджеру залов.';if(s.includes('привет')||s.includes('здрав'))ans='Приветствуем вас в Le Prestige! Чем могу помочь?';if(s.includes('мастер')||s.includes('елен')||s.includes('крист')||s.includes('анн'))ans='Наши мастера: Елена Вернер (волосы), Кристина Ли (маникюр) и Анна Дюпон (визаж). Полная презентация опыта доступна выше!';if(s.includes('запис')||s.includes('форм'))ans='Вы можете заполнить форму заявки прямо под блоками презентации!';bM.textContent=ans;bdy.appendChild(bM);bdy.scrollTop=bdy.scrollHeight},700)}</script><script src="script.js"></script></body></html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон красоты Марины Борухсон</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">Марина <span class="logo-accent">Борухсон</span></div>
+        <nav class="nav-menu">
+            <a href="#portfolio" class="nav-link">Наши работы</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <a href="https://yclients.com" target="_blank" class="btn-book" style="text-decoration:none;">Онлайн-Запись</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.85)),url('img/hero-1.jpg')"></div>
+            <div class="slide" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.85)),url('img/hero-2.jpg')"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Искусство вашей <span class="italic-title">совершенности</span></h1>
+            <p class="hero-subtitle">Премиальный бьюти-сервис Марины Борухсон. Пространство релакса, безупречного стиля и заботы в каждой детали.</p>
+            <a href="https://yclients.com" target="_blank" class="btn-book" style="text-decoration:none; display:inline-block;">Забронировать визит</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2 class="section-title">Наши работы и услуги</h2>
+        <div class="presentation-container">
+            
+            <div class="presentation-block">
+                <div class="master-card">
+                    <img src="img/nails.jpg" alt="Ногтевой сервис" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Ногтевой сервис</h3>
+                    <p class="master-text">Безупречный маникюр, smart-педикюр, премиальные покрытия и лечебные эко-составы.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Зал ногтевой эстетики & SPA</h4>
+                    <p class="zone-desc">100% стерилизация по строгим стандартам. Крафт-пакеты вскрываются исключительно при вас.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block reverse">
+                <div class="master-card">
+                    <img src="img/recliner.jpg" alt="Работа в 4 и 6 рук" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Услуги в 4 и 6 рук</h3>
+                    <p class="master-text">Параллельные процедуры на мега-удобных реклайнерах. Ресницы, маникюр и педикюр одновременно.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Релакс-комплексы «Всё и сразу»</h4>
+                    <p class="zone-desc">Всего 2 часа на реклайнере вместо 6 часов в креслах. Вы встаете отдохнувшей и счастливой.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block">
+                <div class="master-card">
+                    <img src="img/hair.jpg" alt="Парикмахерские услуги" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Услуги парикмахера</h3>
+                    <p class="master-text">Сложные трендовые техники окрашивания, авторские стрижки и глубокие восстанавливающие уходы.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Парикмахерский зал Haute Couture</h4>
+                    <p class="zone-desc">Работаем исключительно на премиальных брендах косметики. Индивидуальный подбор под ваш стиль.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block reverse">
+                <div class="master-card">
+                    <img src="img/brows.jpg" alt="Ресницы и Брови" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Брови & Ресницы</h3>
+                    <p class="master-text">Наращивание ресниц, ламинирование и точная архитектура бровей под анатомию лица.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Архитектура взгляда</h4>
+                    <p class="zone-desc">Невероятно долгая носка ресниц. Вы просто забываете о том, что их нужно регулярно обновлять.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block">
+                <div class="master-card">
+                    <img src="img/shugaring.jpg" alt="Шугаринг" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Шугаринг & Воск</h3>
+                    <p class="master-text">Деликатное удаление волос сахарной пастой и премиальным воском с заботой о коже.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Кабинет депиляции</h4>
+                    <p class="zone-desc">Процедуры выполняются мастерами с золотыми руками. Быстро, безболезненно и комфортно.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block reverse">
+                <div class="master-card">
+                    <img src="img/massage.jpg" alt="Массаж тела" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Массаж тела</h3>
+                    <p class="master-text">Ручные и аппаратные методики коррекции фигуры, снятия зажимов и полного расслабления.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Массажный кабинет</h4>
+                    <p class="zone-desc">Эффективные курсы медицинского, лимфодренажного и релакс-массажа для вас и вашей семьи.</p>
+                </div>
+            </div>
+
+            <div class="presentation-block">
+                <div class="master-card">
+                    <img src="img/makeup.jpg" alt="Визаж и Укладка" style="width:150px;height:150px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-rose);margin-bottom:20px;">
+                    <h3>Визаж & Укладка</h3>
+                    <p class="master-text">Макияж, создание вечерних образов. Возможность выполнения услуг с выездом на дом.</p>
+                </div>
+                <div class="zone-info">
+                    <h4>Студия стиля & Beauty Delivery</h4>
+                    <p class="zone-desc">Сбор на любое мероприятие. Визажист подберет идеальный макияж и расскажет, что подходит именно вам.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="reviews" class="section section-alt">
+        <h2 class="section-title">Отзывы наших гостей</h2>
+        <div class="reviews-container" id="reviewsContainer"></div>
+    </section>
+
+    <section class="section">
+        <div class="booking-wrapper">
+            <div class="booking-card">
+                <h3>Забронировать визит онлайн</h3>
+                <p>Выберите удобное время, услугу и любимого мастера в один клик через систему онлайн-записи.</p>
+                <a href="https://yclients.com" target="_blank" class="btn-book" style="text-decoration:none; display:block; text-align:center; padding:16px 0; background:var(--rose-gold); color:#fff; border:none; font-weight:600;">Выбрать время</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section section-alt">
+        <h2 class="section-title">Контакты и локация</h2>
+        <div class="contacts-wrapper">
+            <div class="contact-info">
+                <h3>Ждем вас</h3>
+                <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div class="contact-text">г. Москва, ул. Новый Арбат, 21</div></div>
+                <div class="contact-item"><i class="fa-solid fa-phone"></i><div class="contact-text">+7 (495) 000-00-00</div></div>
+                <div class="contact-item"><i class="fa-solid fa-clock"></i><div class="contact-text">Ежедневно: 10:00 — 22:00</div></div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://yandex.ru" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Салон красоты Марины Борухсон. Премиальный сервис с 2023 года. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
