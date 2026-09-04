@@ -1,13 +1,13 @@
 @import url('https://googleapis.com');
 
 :root {
-    --bg-dark: #1A1C1E;          /* Возвращаем благородную темную основу */
-    --bg-card: #27292B;          /* Матовый темно-серый для блоков */
+    --bg-dark: #0A0608;          /* Глубокий, роскошный темный фон */
+    --bg-card: #130D11;          /* Матовый темный для карточек */
     --bg-perimeter: #3A3D40;     /* Тот самый мышиный серый Марины */
-    --accent-pink: #E11866;      /* Яркий розовый из брендбука */
+    --accent-pink: #E11866;      /* Сочный розовый из брендбука */
     --rose-gold: linear-gradient(135deg, #E11866, #B0104B, #7E0533);
     --text-light: #FDF5F7;
-    --text-muted: #A3ADB5;
+    --text-muted: #8E797E;
     --font-primary: 'Montserrat', sans-serif;
     --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -20,19 +20,19 @@
 }
 
 body {
-    background-color: var(--bg-perimeter); /* Серый мышиный уходит строго на самый задний план (периметр) */
+    background-color: var(--bg-perimeter); /* Мышиный серый уходит строго на самые дальние края */
     color: var(--text-light);
     font-family: var(--font-primary);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Ограничиваем контент по центру, чтобы по краям на больших экранах был виден серый периметр */
+/* Ограничиваем контент по центру, чтобы по краям на мониторах была серая рамка */
 .site-wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: var(--bg-dark); /* Центр сайта остается глубоким и темным */
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    background-color: var(--bg-dark); /* Центр сайта снова глубокий, дорогой и темный */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     position: relative;
 }
 
@@ -49,7 +49,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: rgba(26, 28, 30, 0.9);
+    background: rgba(10, 6, 8, 0.85);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(225, 24, 102, 0.15);
 }
@@ -156,7 +156,7 @@ body {
     font-size: 18px;
     color: var(--text-light);
     margin-bottom: 40px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 /* --- Секции --- */
@@ -165,7 +165,7 @@ body {
 }
 
 .section-alt {
-    background-color: #202224;
+    background-color: #110B0E;   /* Возвращаем контрастный темный оттенок */
 }
 
 .section-title {
@@ -202,13 +202,13 @@ body {
     background: var(--bg-card);
     padding: 30px;
     border-radius: 4px;
-    border: 2px solid var(--bg-perimeter); /* Обводка блоков мышиным серым как на скрине */
+    border: 2px solid var(--bg-perimeter); /* Тонкая серая обводка вокруг каждого блока */
     transition: var(--transition);
 }
 
 .presentation-block:hover {
     border-color: var(--accent-pink);
-    box-shadow: 0 15px 40px rgba(225, 24, 102, 0.1);
+    box-shadow: 0 15px 40px rgba(225, 24, 102, 0.15);
 }
 
 .presentation-block.reverse {
@@ -352,7 +352,7 @@ body {
 
 /* --- Подвал --- */
 .site-footer {
-    background-color: #141517;
+    background-color: #0A0608;
     padding: 30px 4%;
     text-align: center;
     font-size: 13px;
@@ -361,7 +361,7 @@ body {
 
 /* --- Адаптивность --- */
 @media (max-width: 1440px) {
-    body { background-color: var(--bg-dark); } /* На мобилках и ноутах убираем внешние поля, чтобы не тратить место */
+    body { background-color: var(--bg-dark); } /* На ноутбуках и телефонах убираем поля, чтобы сайт был на весь экран */
 }
 
 @media (max-width: 992px) {
